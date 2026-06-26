@@ -1,250 +1,400 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Eka Prasetya Abdin Kurniawan</title>
-    <style>
-        :root {
-            --primary-color: #0f172a;
-            --secondary-color: #2563eb;
-            --text-color: #334155;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV – Eka Prasetya Abdin Kurniawan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght=700&family=Inter:wght=300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    :root {
+      --navy:   #1A2744;
+      --gold:   #C9A84C;
+      --light:  #F7F5F0;
+      --white:  #FFFFFF;
+      --text:   #2D2D2D;
+      --muted:  #6B7280;
+      --border: #E0D9CC;
+    }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            padding: 20px;
-        }
+    html { scroll-behavior: smooth; }
 
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+    }
 
-        header {
-            text-align: center;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-        }
+    /* ── HEADER ── */
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 60px 40px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      border: 40px solid rgba(201,168,76,0.15);
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: 30%;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      border: 30px solid rgba(201,168,76,0.08);
+    }
 
-        header h1 {
-            color: var(--primary-color);
-            font-size: 2.2rem;
-            margin-bottom: 5px;
-        }
+    .header-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
 
-        header h2 {
-            color: var(--secondary-color);
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 0.9rem;
-        }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 46px);
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
 
-        .contact-info a, .contact-info span {
-            color: var(--text-color);
-            text-decoration: none;
-        }
+    .title-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      margin-top: 12px;
+      margin-bottom: 28px;
+    }
 
-        .contact-info a:hover {
-            color: var(--secondary-color);
-        }
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.8);
+    }
+    .contacts a { color: var(--gold); text-decoration: none; }
+    .contacts a:hover { text-decoration: underline; }
+    .contacts span::before { content: '· '; color: var(--gold); }
+    .contacts span:first-child::before { content: ''; }
 
-        section {
-            margin-bottom: 30px;
-        }
+    /* ── LAYOUT ── */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
 
-        section h3 {
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            border-left: 4px solid var(--secondary-color);
-            padding-left: 10px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+    section { margin-bottom: 44px; }
 
-        .summary {
-            text-align: justify;
-        }
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
 
-        .timeline-item {
-            margin-bottom: 20px;
-        }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--navy);
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--gold);
+      margin-bottom: 22px;
+    }
 
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            color: var(--primary-color);
-            flex-wrap: wrap;
-        }
+    /* ── RINGKASAN ── */
+    .summary-box {
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      padding: 20px 24px;
+      font-size: 14.5px;
+      color: var(--text);
+      line-height: 1.8;
+    }
 
-        .timeline-sub {
-            color: var(--secondary-color);
-            font-style: italic;
-            margin-bottom: 5px;
-            font-size: 0.95rem;
-        }
+    /* ── PENGALAMAN ── */
+    .job {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2px 20px;
+      margin-bottom: 28px;
+    }
+    .job-title {
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 15px;
+    }
+    .job-company {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .job-date {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold);
+      white-space: nowrap;
+      text-align: right;
+      padding-top: 2px;
+    }
+    .job ul { padding-left: 18px; }
+    .job li {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #3D3D3D;
+    }
+    .job-grid-bottom { grid-column: 1 / -1; }
 
-        .timeline-item ul {
-            padding-left: 20px;
-            margin-top: 5px;
-        }
+    /* ── SKILL TAGS ── */
+    .skill-group { margin-bottom: 16px; }
+    .skill-group-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      font-size: 12.5px;
+      padding: 5px 13px;
+      border-radius: 2px;
+    }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
+    /* ── EDUKASI ── */
+    .edu {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 4px;
+      background: var(--white);
+      padding: 18px 22px;
+      border-bottom: 3px solid var(--gold);
+    }
+    .edu-name { font-weight: 600; color: var(--navy); }
+    .edu-detail { font-size: 13px; color: var(--muted); }
+    .edu-ipk {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .edu-ipk span { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--muted); display: block; text-align: right; }
 
-        .skill-category h4 {
-            color: var(--primary-color);
-            margin-bottom: 5px;
-            font-size: 1rem;
-        }
+    /* ── SERTIFIKASI ── */
+    .cert-list { list-style: none; }
+    .cert-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .cert-list li::before {
+      content: '✦';
+      color: var(--gold);
+      font-size: 10px;
+      flex-shrink: 0;
+    }
 
-        .skill-category p {
-            font-size: 0.95rem;
-        }
+    /* ── LAMARAN BADGE ── */
+    .apply-banner {
+      background: var(--navy);
+      color: var(--white);
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+    .apply-banner .icon { font-size: 28px; }
+    .apply-banner strong { color: var(--gold); }
+    .apply-banner p { font-size: 13.5px; line-height: 1.5; }
 
-        .cert-list, .edu-list {
-            list-style: none;
-        }
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 22px 20px;
+      font-size: 12px;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
 
-        .cert-list li, .edu-list li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 15px;
-        }
-
-        .cert-list li::before, .edu-list li::before {
-            content: "•";
-            color: var(--secondary-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            .timeline-header {
-                flex-direction: column;
-            }
-        }
-    </style>
+    @media (max-width: 600px) {
+      header { padding: 40px 20px 36px; }
+      .job { grid-template-columns: 1fr; }
+      .job-date { text-align: left; }
+      .edu { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>Eka Prasetya Abdin Kurniawan, S.Ak.</h1>
-        <h2>Sarjana Ekonomi (Akuntansi)</h2>
-        <div class="contact-info">
-            <span>📍 Semarang, Jawa Tengah</span>
-            <span>📞 089687060695</span>
-            <span>✉️ <a href="mailto:ekaprasetyaabdink@gmail.com">ekaprasetyaabdink@gmail.com</a></span>
-            <span>🔗 <a href="https://www.linkedin.com/in/eka-prasetya-61b3703b7" target="_blank">LinkedIn</a></span>
-        </div>
-    </header>
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <p class="eyebrow">Curriculum Vitae</p>
+    <h1>Eka Prasetya Abdin Kurniawan, S.Ak.</h1>
+    <div class="title-badge">Sarjana Ekonomi – Akuntansi</div>
+    <div class="contacts">
+      <span>📧 <a href="mailto:ekaprasetyaabdink@gmail.com">ekaprasetyaabdink@gmail.com</a></span>
+      <span>💬 <a href="https://wa.me/6289687060695" target="_blank">WhatsApp: 089687060695</a></span>
+      <span>📍 Semarang, Jawa Tengah</span>
+      <span>🔗 <a href="https://www.linkedin.com/in/eka-prasetya-61b3703b7" target="_blank">LinkedIn</a></span>
+    </div>
+  </div>
+</header>
 
-    <section>
-        <h3>Ringkasan Profesional</h3>
-        <p class="summary">
-            Lulusan Sarjana Ekonomi dari Universitas Semarang (USM) dengan IPK 3.37. Memiliki keahlian teknis yang kuat dalam pengolahan data, administrasi operasional, kontrol inventaris, serta pengelolaan dokumen digital. Berpengalaman dalam pengelolaan kasir dan koordinasi operasional harian yang membutuhkan ketelitian tinggi, kejujuran, dan kedisiplinan. Memiliki kemampuan adaptasi yang baik, siap bekerja dalam tim maupun individu, serta bersedia bekerja dengan sistem shift untuk mendukung kelancaran operasional perusahaan.
-        </p>
-    </section>
+<main>
 
-    <section>
-        <h3>Pengalaman Kerja & Proyek</h3>
-        <div class="timeline-item">
-            <div class="timeline-header">
-                <span>Staff Operasional & Kasir</span>
-                <span>Mei 2019 - April 2020</span>
-            </div>
-            <div class="timeline-sub">Rudi Print - Semarang</div>
-            <ul>
-                <li>Bertanggung jawab atas operasional harian jasa pencetakan dokumen dan pengolahan file digital milik pelanggan.</li>
-                <li>Melakukan pengecekan ketelitian data dan format dokumen sebelum proses cetak untuk meminimalkan kesalahan operasional.</li>
-                <li>Mengelola transaksi pembayaran harian dengan teliti serta menyusun laporan kas harian dengan akurat.</li>
-            </ul>
-        </div>
+  <!-- BANNER LAMARAN -->
+  <div class="apply-banner">
+    <div class="icon">🚆</div>
+    <p>Melamar posisi <strong>Crew Facilities</strong> di<br><strong>PT Reska Multi Usaha (KAI Services)</strong> – Penempatan Semarang</p>
+  </div>
 
-        <div class="timeline-item">
-            <div class="timeline-header">
-                <span>Penelitian Sistem Informasi Akuntansi (Proyek Skripsi)</span>
-                <span>Oktober 2024 - Desember 2024</span>
-            </div>
-            <div class="timeline-sub">Digitalisasi Data UMKM</div>
-            <ul>
-                <li>Memimpin proses digitalisasi dan migrasi database transaksi harian UMKM secara sistematis untuk mempercepat proses pencatatan.</li>
-                <li>Mengolah database mentah menggunakan rumus Excel tingkat lanjut menjadi laporan yang terstruktur dan akurat.</li>
-                <li>Mengidentifikasi dan memperbaiki kesalahan input data sebesar 100% sebelum laporan diserahkan.</li>
-            </ul>
-        </div>
-    </section>
+  <!-- RINGKASAN -->
+  <section>
+    <p class="section-label">Tentang Saya</p>
+    <h2>Ringkasan Profesional</h2>
+    <div class="summary-box">
+      Lulusan Sarjana Ekonomi (Akuntansi) dari Universitas Semarang (USM) dengan IPK 3.37. Memiliki kombinasi keahlian administrasi data yang kuat serta pengalaman praktis dalam operasional layanan harian. Berpengalaman dalam pengelolaan kontrol inventaris, koordinasi fasilitas logistik dokumen digital, serta pengawasan transaksi. Memiliki ketelitian tinggi, jujur, berdisiplin tinggi, serta siap berkontribusi secara penuh baik secara mandiri maupun tim dengan sistem kerja shift untuk mendukung operasional layanan kereta api di KAI Services.
+    </div>
+  </section>
 
-    <section>
-        <h3>Pendidikan</h3>
-        <ul class="edu-list">
-            <li>
-                <strong>Universitas Semarang (USM)</strong> (2018 - 2025)<br>
-                S1 Akuntansi | IPK: 3.37 / 4.00
-            </li>
+  <!-- PENGALAMAN -->
+  <section>
+    <p class="section-label">Riwayat</p>
+    <h2>Pengalaman & Proyek</h2>
+
+    <div class="job">
+      <div class="job-title">Staff Operasional & Kasir</div>
+      <div class="job-date">Mei 2019 – April 2020</div>
+      <div class="job-company">Rudi Print – Semarang</div>
+      <div class="job-grid-bottom">
+        <ul>
+          <li>Bertanggung jawab penuh atas manajemen fasilitas operasional harian, kelancaran logistik berkas, dan penanganan dokumen digital milik pelanggan.</li>
+          <li>Melakukan kontrol kualitas, pengawasan ketelitian data, serta validasi format sebelum proses akhir demi menghindari kesalahan operasional.</li>
+          <li>Mengelola kas operasional harian secara akurat dan menyusun pelaporan keuangan harian yang transparan.</li>
         </ul>
-    </section>
+      </div>
+    </div>
 
-    <section>
-        <h3>Keahlian</h3>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h4>Operasional & Data</h4>
-                <p>Data Entry, Cash Handling, Document Management, Inventory Control, Validasi Data.</p>
-            </div>
-            <div class="skill-category">
-                <h4>Software & Sistem</h4>
-                <p>Microsoft Excel (VLOOKUP, Pivot Table), MS. Word, MS. PowerPoint, Sistem Informasi Akuntansi.</p>
-            </div>
-            <div class="skill-category">
-                <h4>Soft Skills</h4>
-                <p>Ketelitian Tinggi, Kejujuran, Manajemen Waktu, Kedisiplinan, Kerja Sama Tim.</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h3>Sertifikasi & Penghargaan</h3>
-        <ul class="cert-list">
-            <li>Sertifikat Pelatihan Microsoft Office 2019 & 365 – UPT Komputer USM (2023)</li>
-            <li>TOEFL Prediction Test (Score: 403) – Bina Bahasa Jaya USM (2024)</li>
+    <div class="job">
+      <div class="job-title">Penelitian Sistem Informasi Akuntansi <em style="font-weight:400;color:var(--muted)">(Proyek Skripsi)</em></div>
+      <div class="job-date">Oktober – Desember 2024</div>
+      <div class="job-company">Universitas Semarang (USM)</div>
+      <div class="job-grid-bottom">
+        <ul>
+          <li>Memimpin proses digitalisasi, penataan alur kerja, serta migrasi basis data transaksi harian UMKM secara sistematis.</li>
+          <li>Mengolah data mentah menggunakan fungsi tingkat lanjut Microsoft Excel menjadi laporan analisis yang terstruktur dan siap audit.</li>
+          <li>Mengidentifikasi celah eror dan menerapkan rekonsiliasi data sebesar 100% demi akurasi pelaporan.</li>
         </ul>
-    </section>
-</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEAHLIAN -->
+  <section>
+    <p class="section-label">Kompetensi</p>
+    <h2>Keahlian</h2>
+
+    <div class="skill-group">
+      <div class="skill-group-title">Operasional & Fasilitas</div>
+      <div class="tags">
+        <span class="tag">Inventory Control</span>
+        <span class="tag">Document Management</span>
+        <span class="tag">Facilities & Logistics Support</span>
+        <span class="tag">Data Entry & Validation</span>
+        <span class="tag">Cash Handling</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-title">Software & Sistem</div>
+      <div class="tags">
+        <span class="tag">Microsoft Excel</span>
+        <span class="tag">VLOOKUP & Pivot Table</span>
+        <span class="tag">Microsoft Word</span>
+        <span class="tag">Microsoft PowerPoint</span>
+        <span class="tag">Sistem Informasi Akuntansi</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-title">Karakter Kerja</div>
+      <div class="tags">
+        <span class="tag">Ketelitian Tinggi</span>
+        <span class="tag">Kedisiplinan</span>
+        <span class="tag">Manajemen Waktu</span>
+        <span class="tag">Kerjasama Tim (Teamwork)</span>
+        <span class="tag">Adaptasi Kerja Shift</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUKASI -->
+  <section>
+    <p class="section-label">Akademik</p>
+    <h2>Pendidikan</h2>
+    <div class="edu">
+      <div>
+        <div class="edu-name">Universitas Semarang (USM)</div>
+        <div class="edu-detail">S1 Akuntansi &nbsp;·&nbsp; 2018 – 2025</div>
+      </div>
+      <div class="edu-ipk">3.37 <span>IPK / 4.00</span></div>
+    </div>
+  </section>
+
+  <!-- SERTIFIKASI -->
+  <section>
+    <p class="section-label">Pencapaian</p>
+    <h2>Sertifikasi</h2>
+    <ul class="cert-list">
+      <li>Sertifikat Pelatihan Microsoft Office 2019 &amp; 365 – UPT Komputer USM (2023)</li>
+      <li>TOEFL Prediction Test (Score: 403) – Bina Bahasa Jaya USM (2024)</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Eka Prasetya Abdin Kurniawan &nbsp;·&nbsp; <a href="mailto:ekaprasetyaabdink@gmail.com">ekaprasetyaabdink@gmail.com</a>
+</footer>
 
 </body>
 </html>
