@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Eka Prasetya Abdin Kurniawan</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #2563eb;
+            --text-color: #334155;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        header h2 {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9rem;
+        }
+
+        .contact-info a, .contact-info span {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--secondary-color);
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 10px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .summary {
+            text-align: justify;
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: var(--primary-color);
+            flex-wrap: wrap;
+        }
+
+        .timeline-sub {
+            color: var(--secondary-color);
+            font-style: italic;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .timeline-item ul {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .skill-category p {
+            font-size: 0.95rem;
+        }
+
+        .cert-list, .edu-list {
+            list-style: none;
+        }
+
+        .cert-list li, .edu-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .cert-list li::before, .edu-list li::before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .timeline-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Eka Prasetya Abdin Kurniawan, S.Ak.</h1>
+        <h2>Sarjana Ekonomi (Akuntansi)</h2>
+        <div class="contact-info">
+            <span>📍 Semarang, Jawa Tengah</span>
+            <span>📞 089687060695</span>
+            <span>✉️ <a href="mailto:ekaprasetyaabdink@gmail.com">ekaprasetyaabdink@gmail.com</a></span>
+            <span>🔗 <a href="https://www.linkedin.com/in/eka-prasetya-61b3703b7" target="_blank">LinkedIn</a></span>
+        </div>
+    </header>
+
+    <section>
+        <h3>Ringkasan Profesional</h3>
+        <p class="summary">
+            Lulusan Sarjana Ekonomi dari Universitas Semarang (USM) dengan IPK 3.37. Memiliki keahlian teknis yang kuat dalam pengolahan data, administrasi operasional, kontrol inventaris, serta pengelolaan dokumen digital. Berpengalaman dalam pengelolaan kasir dan koordinasi operasional harian yang membutuhkan ketelitian tinggi, kejujuran, dan kedisiplinan. Memiliki kemampuan adaptasi yang baik, siap bekerja dalam tim maupun individu, serta bersedia bekerja dengan sistem shift untuk mendukung kelancaran operasional perusahaan.
+        </p>
+    </section>
+
+    <section>
+        <h3>Pengalaman Kerja & Proyek</h3>
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <span>Staff Operasional & Kasir</span>
+                <span>Mei 2019 - April 2020</span>
+            </div>
+            <div class="timeline-sub">Rudi Print - Semarang</div>
+            <ul>
+                <li>Bertanggung jawab atas operasional harian jasa pencetakan dokumen dan pengolahan file digital milik pelanggan.</li>
+                <li>Melakukan pengecekan ketelitian data dan format dokumen sebelum proses cetak untuk meminimalkan kesalahan operasional.</li>
+                <li>Mengelola transaksi pembayaran harian dengan teliti serta menyusun laporan kas harian dengan akurat.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <span>Penelitian Sistem Informasi Akuntansi (Proyek Skripsi)</span>
+                <span>Oktober 2024 - Desember 2024</span>
+            </div>
+            <div class="timeline-sub">Digitalisasi Data UMKM</div>
+            <ul>
+                <li>Memimpin proses digitalisasi dan migrasi database transaksi harian UMKM secara sistematis untuk mempercepat proses pencatatan.</li>
+                <li>Mengolah database mentah menggunakan rumus Excel tingkat lanjut menjadi laporan yang terstruktur dan akurat.</li>
+                <li>Mengidentifikasi dan memperbaiki kesalahan input data sebesar 100% sebelum laporan diserahkan.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h3>Pendidikan</h3>
+        <ul class="edu-list">
+            <li>
+                <strong>Universitas Semarang (USM)</strong> (2018 - 2025)<br>
+                S1 Akuntansi | IPK: 3.37 / 4.00
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Keahlian</h3>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Operasional & Data</h4>
+                <p>Data Entry, Cash Handling, Document Management, Inventory Control, Validasi Data.</p>
+            </div>
+            <div class="skill-category">
+                <h4>Software & Sistem</h4>
+                <p>Microsoft Excel (VLOOKUP, Pivot Table), MS. Word, MS. PowerPoint, Sistem Informasi Akuntansi.</p>
+            </div>
+            <div class="skill-category">
+                <h4>Soft Skills</h4>
+                <p>Ketelitian Tinggi, Kejujuran, Manajemen Waktu, Kedisiplinan, Kerja Sama Tim.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Sertifikasi & Penghargaan</h3>
+        <ul class="cert-list">
+            <li>Sertifikat Pelatihan Microsoft Office 2019 & 365 – UPT Komputer USM (2023)</li>
+            <li>TOEFL Prediction Test (Score: 403) – Bina Bahasa Jaya USM (2024)</li>
+        </ul>
+    </section>
+</div>
+
+</body>
+</html>
